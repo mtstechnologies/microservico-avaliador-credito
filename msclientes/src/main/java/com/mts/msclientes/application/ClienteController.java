@@ -14,10 +14,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.mts.msclientes.application.dto.ClienteDTO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("clientes")
 @RequiredArgsConstructor
+@Slf4j
 public class ClienteController {
 	
 	
@@ -25,6 +27,7 @@ public class ClienteController {
 	
 	@GetMapping
 	public String status() {
+		log.info("Obtendo o status do microserviço de clientes");
 		return "ok";
 	}
 	
