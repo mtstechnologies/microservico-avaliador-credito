@@ -16,7 +16,7 @@ import com.mts.msclientes.application.dto.ClienteDTO;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("clientes")
 @RequiredArgsConstructor
 public class ClienteController {
 	
@@ -48,19 +48,4 @@ public class ClienteController {
 		}
 		return ResponseEntity.ok(cliente);
 	}
-	/*
-	 @PostMapping
-	    public ResponseEntity<ClienteDTO> criarCliente(@RequestBody ClienteDTO clienteDTO) {
-	        ClienteDTO novoCliente = service.salvarCliente(clienteDTO);
-	        return ResponseEntity.ok(novoCliente);
-	    }
-	
-	@GetMapping("/{cpf}")
-	 public ResponseEntity<ClienteDTO> buscarPorCpf(@PathVariable String cpf){
-		Optional<ClienteDTO> cliente = service.obterClientePorCpf(cpf);
-		return cliente.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-
-	}
-	*/
 }

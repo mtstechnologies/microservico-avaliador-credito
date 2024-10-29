@@ -25,29 +25,4 @@ public class ClienteService {
 	public Optional<Cliente> obterPorCpf(String cpf){
 		return repository.findByCpf(cpf);
 	}
-	/*
-	 @Transactional
-	    public ClienteDTO salvarCliente(ClienteDTO clienteDTO) {
-	        Cliente cliente = new Cliente();
-	        cliente.setCpf(clienteDTO.getCpf());
-	        cliente.setNome(clienteDTO.getNome());
-	        cliente.setIdade(clienteDTO.getIdade());
-	        
-	        cliente = repository.save(cliente);
-	        
-	        clienteDTO.setCpf(cliente.getCpf());
-	        return clienteDTO;
-	    }
-	
-	public Optional<ClienteDTO> obterClientePorCpf(String cpf){
-		return repository.findByCpf(cpf)
-				
-        .map(cliente -> {
-	            ClienteDTO dto = new ClienteDTO();
-	            dto.setCpf(cliente.getCpf());
-	            dto.setNome(cliente.getNome());
-	            dto.setIdade(cliente.getIdade());
-            return dto;
-         });
-         */
 }
