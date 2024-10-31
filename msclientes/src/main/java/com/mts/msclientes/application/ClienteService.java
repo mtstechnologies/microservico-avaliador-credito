@@ -22,7 +22,7 @@ public class ClienteService {
 		return repository.save(cliente);
 	}
 	
-	public Optional<Cliente> obterPorCpf(String cpf){
+	public Optional<Cliente> obterClientePorCpf(String cpf){
 		return repository.findByCpf(cpf);
 	}
 }
